@@ -75,6 +75,30 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
   // Add your code here!
+  $(document).ready(function(){
+    console.log("Let's get ready to party with jQuery!");
+  });
+
+  $('article img').addClass('image-center');
+
+  $('article p:last-child').remove();
+
+  $('#title').css('font-size', Math.random * 100);
+
+  $('ol').append("<li>Wait, no, it's a kitten!</li>");
+
+  $('aside').empty().append("<p>I'm so sorry, that list was incredibly silly. I can't help myself, I just love lists.</p>");
+
+$('.form-control').on('keyup blur change', function(){
+  let red =  $('form-control').eq(0).val();
+  let green = $('form-control').eq(1).val();
+  let blue = $('form-control').eq(2).val();
+  $('body').css('background-color', 'rgb('+ red +','+ green +','+ blue +')');
+});
+
+$('img').on('click', function(){
+  $('img').remove();
+});
 </script>
 </body>
 
